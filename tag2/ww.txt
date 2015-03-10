@@ -1,0 +1,4 @@
+Hello World
+error World
+stdout World
+It's a mad world!
