@@ -42,3 +42,11 @@ https://docs.python.org/2/library/stdtypes.html#string-formatting-operations
 Regular Expresion (RegEx)
 ========================
 https://www.cs.tut.fi/~jkorpela/perl/regexp.html
+
+.  : beliebiges Zeichen
+\d : Ziffer; 	\D : Nicht-Ziffer
+\w : Zeichen, das "Wortbestandteil" sein kann
+\s : Whitespace
+\n : NewLine
+
+... -> perldoc perlre
