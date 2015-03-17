@@ -63,7 +63,9 @@ https://www.cs.tut.fi/~jkorpela/perl/regexp.html
 
 ... -> perldoc perlre
 
-Wie arbeitet eine Regex-Maschine?:
+Wie arbeitet eine Regex-Maschine?
+---------------------------------
+
 Es wird von "links nach rechts" abgearbeite.
 default: "gierig" ("greedy") also z.B. bei 3*: 33333333333333x: alle 3-en (soweit wie möglich gehen)
 Vielfachheitangabe + '?' : so bescheiden wir möglich also z.B.
