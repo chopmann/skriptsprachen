@@ -43,10 +43,22 @@ Regular Expresion (RegEx)
 ========================
 https://www.cs.tut.fi/~jkorpela/perl/regexp.html
 
-.  : beliebiges Zeichen
-\d : Ziffer; 	\D : Nicht-Ziffer
-\w : Zeichen, das "Wortbestandteil" sein kann
-\s : Whitespace
-\n : NewLine
+(...)  	: Capturing - es sei denn:
+(?:...)	: Clustering ohne Capturing
+
+?	: höhstens 1x
++	: mind. 1x
+*	: bel. viel mal
+{n}	: genau n-mal 
+{n,m}	: mind. n-mal, höchstens m-mal
+{,m}	: höchstens m-mal
+{n,}	: mind. n-mal
+
+
+.  	: beliebiges Zeichen
+\d 	: Ziffer; 	\D : Nicht-Ziffer
+\w 	: Zeichen, das "Wortbestandteil" sein kann
+\s 	: Whitespace
+\n 	: NewLine
 
 ... -> perldoc perlre
