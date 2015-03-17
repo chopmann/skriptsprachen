@@ -62,3 +62,12 @@ https://www.cs.tut.fi/~jkorpela/perl/regexp.html
 \n 	: NewLine
 
 ... -> perldoc perlre
+
+Wie arbeitet eine Regex-Maschine?:
+Es wird von "links nach rechts" abgearbeite.
+default: "gierig" ("greedy") also z.B. bei 3*: 33333333333333x: alle 3-en (soweit wie möglich gehen)
+Vielfachheitangabe + '?' : so bescheiden wir möglich also z.B.
+	/3*?/1	: von 33333333333333x: gar keine 3
+	/3*?x/	: von 33333333333333x: alle 3-en
+	/(.*?)x/ bei 333x33x33x: $1 eq '333'
+	/(.*)x/  bei 333x33x33x: $1 es '333x33x33'
