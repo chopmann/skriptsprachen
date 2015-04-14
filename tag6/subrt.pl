@@ -7,15 +7,25 @@ my ($retw, @retw, $n, $i, %wb, $k, $v);
 #Argumente können auch bei dem Ausführen übergeben werden
 #Beispiel: perl ./subrt.pl printmenot printme
 shift;
-print "@ARGV \n";
+print "@ARGV    $ARGV[1]\n";
 
 #Erzeugen eines Dictionarys mit einer Liste ("Key", "Value")
 %wb = ("ein", "a",
        "der", "the",
        "Haus", "house");
 
-for $k(keys %wb){ $v = $wb{$k};
+#neuen Dictionary Eintrag erstellen
+$wb{"Stift"} = "pen";
+$wb{"0Der" } = "The";
+
+print defined $wb{"irgendwas"};
+
+#Ausgabe mit Sortier Funktion
+for $k(sort {lc($a) cmp lc $b} keys %wb){ $v = $wb{$k};
     print "$k ---> $v\n" }
+
+print "not exists\n" if
+       not exists $wb{"irgendwas"};
 
 #for $v(keys %wb){print "$v\n"}
 
